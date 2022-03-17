@@ -29569,11 +29569,15 @@ if ("development" === 'production') {
 },{"./cjs/react-dom.development.js":"node_modules/react-dom/cjs/react-dom.development.js"}],"index.js":[function(require,module,exports) {
 "use strict";
 
-var _react = _interopRequireDefault(require("react"));
+var _react = _interopRequireWildcard(require("react"));
 
 var _reactDom = _interopRequireDefault(require("react-dom"));
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _getRequireWildcardCache(nodeInterop) { if (typeof WeakMap !== "function") return null; var cacheBabelInterop = new WeakMap(); var cacheNodeInterop = new WeakMap(); return (_getRequireWildcardCache = function (nodeInterop) { return nodeInterop ? cacheNodeInterop : cacheBabelInterop; })(nodeInterop); }
+
+function _interopRequireWildcard(obj, nodeInterop) { if (!nodeInterop && obj && obj.__esModule) { return obj; } if (obj === null || typeof obj !== "object" && typeof obj !== "function") { return { default: obj }; } var cache = _getRequireWildcardCache(nodeInterop); if (cache && cache.has(obj)) { return cache.get(obj); } var newObj = {}; var hasPropertyDescriptor = Object.defineProperty && Object.getOwnPropertyDescriptor; for (var key in obj) { if (key !== "default" && Object.prototype.hasOwnProperty.call(obj, key)) { var desc = hasPropertyDescriptor ? Object.getOwnPropertyDescriptor(obj, key) : null; if (desc && (desc.get || desc.set)) { Object.defineProperty(newObj, key, desc); } else { newObj[key] = obj[key]; } } } newObj.default = obj; if (cache) { cache.set(obj, newObj); } return newObj; }
 
 // Native versionimpor
 //    const h1 = document.createElement('div');
@@ -29590,45 +29594,36 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 //    }, span);
 //    const p = React.createElement('p', {className: 'text'}, 'Мне 24')
 //    const div = React.createElement('div', {}, [h1, p]);
-var aLi2 = _react.default.createElement('a', {
-  className: 'header__link',
-  href: '/blog'
-}, 'Резюме');
+// const aLi2 = React.createElement('a', {className: 'header__link', href: '/blog'}, 'Резюме');
+// const li2 = React.createElement('li', {className: 'header__item'}, aLi2);
+// const aLi1 = React.createElement('a', {className: 'header__link', href: '/blog'}, 'Блог');
+// const li1 = React.createElement('li', {className: 'header__item'}, aLi1);  
+// const ul = React.createElement('ul', {className: 'header__list'}, [li1, li2]);
+// const a = React.createElement('a', {
+//         className: 'header__logo active',
+//         'aria-current': 'page',
+//         href: '/'
+//     }, 'Безуглый');
+// const nav = React.createElement('nav', {className: 'page-header__nav'}, [a, ul]);    
+// const div = React.createElement('div', {className: 'page-layout__container'}, nav);
+// const header = React.createElement('header', {className: 'header header_closed'}, div);
+var labelGroup = /*#__PURE__*/_react.default.createElement(_react.Fragment, null, /*#__PURE__*/_react.default.createElement("label", {
+  htmlFor: "inputId"
+}, "\u041B\u0435\u0439\u0431\u043B"), /*#__PURE__*/_react.default.createElement("input", {
+  id: "inputId"
+}));
 
-var li2 = _react.default.createElement('li', {
-  className: 'header__item'
-}, aLi2);
-
-var aLi1 = _react.default.createElement('a', {
-  className: 'header__link',
-  href: '/blog'
-}, 'Блог');
-
-var li1 = _react.default.createElement('li', {
-  className: 'header__item'
-}, aLi1);
-
-var ul = _react.default.createElement('ul', {
-  className: 'header__list'
-}, [li1, li2]);
-
-var a = _react.default.createElement('a', {
-  className: 'header__logo active',
-  'aria-current': 'page',
-  href: '/'
-}, 'Безуглый');
-
-var nav = _react.default.createElement('nav', {
-  className: 'page-header__nav'
-}, [a, ul]);
-
-var div = _react.default.createElement('div', {
-  className: 'page-layout__container'
-}, nav);
-
-var header = _react.default.createElement('header', {
-  className: 'header header_closed'
-}, div);
+var header = /*#__PURE__*/_react.default.createElement("header", {
+  className: "header"
+}, /*#__PURE__*/_react.default.createElement("nav", {
+  className: "page-header__nav"
+}, /*#__PURE__*/_react.default.createElement("a", {
+  className: "header__logo active"
+}, " "), /*#__PURE__*/_react.default.createElement("ul", null, /*#__PURE__*/_react.default.createElement("li", null, /*#__PURE__*/_react.default.createElement("a", {
+  href: "/collaboration"
+}, "\u0420\u0435\u0437\u044E\u043C\u0435")), /*#__PURE__*/_react.default.createElement("li", null, /*#__PURE__*/_react.default.createElement("a", {
+  href: "/blog"
+}, "\u0411\u043B\u043E\u0433")))), labelGroup);
 
 _reactDom.default.render(header, document.getElementById('root'));
 },{"react":"node_modules/react/index.js","react-dom":"node_modules/react-dom/index.js"}],"node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
@@ -29659,7 +29654,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "59637" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "54024" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};
